@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: skyblue;
+}
+
+label { 
+	cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+	max-width: 1440px;
+    padding: 0px 20px;
+}
+
+.main-slider, .control-block {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-slider {
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.slides-inner {
+    display: flex;
+    width: 400%;
+    transition: 1s all;
+}
+
+.slide {
+    width: 25%;
+}
+
+.slide img {
+    width: 100%;
+}
+
+#controls { 
+	width: 100%;
+}
+
+#controls label {
+	display: inline-block; 
+	width: 15px;
+	height: 15px;
+	background: #D2B183;
+}
+
+#controls {
+	text-align: end;
+}
+
+#controls label:hover {
+    opacity: 0.5;
+}
+
+#switch1:checked ~ .main-slider .slides-inner {
+	margin-left: 0;
+}
+
+#switch2:checked ~ .main-slider .slides-inner {
+	margin-left: -100%;
+}
+
+#switch3:checked ~ .main-slider .slides-inner {
+	margin-left: -200%;
+}
+
+#switch4:checked ~ .main-slider .slides-inner {
+	margin-left: -300%;
+}
+
+#switch1:checked ~ .control-block #controls label:nth-child(1),
+#switch2:checked ~ .control-block #controls label:nth-child(2),
+#switch3:checked ~ .control-block #controls label:nth-child(3),
+#switch4:checked ~ .control-block #controls label:nth-child(4) {
+	background: red;
+    border: 1px solid #000000;
+    transition: 0.5s;
+}
+
+#slides .image { 
+	transition: all 1s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover {
+	opacity: 0.6;
+}
+
+#controls label {
+	transition: opacity 0.2s ease-out;
+}
+
+.control-block {
+    display: flex;
+}
+
+.text {
+    font-size: 32px;  
+}
