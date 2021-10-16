@@ -89,6 +89,26 @@ input {
     border: 1px solid #000000;
     transition: 0.5s;
 }
+/* 
+.text::after {
+    transition: 0.5s;
+}
+
+#switch1:checked ~ .control-block .text::after {
+    content: 'First slide text';
+}
+
+#switch2:checked ~ .control-block .text::after {
+    content: 'Second slide text';
+}
+
+#switch3:checked ~ .control-block .text::after {
+    content: 'Third slide text';
+}
+
+#switch4:checked ~ .control-block .text::after {
+    content: 'Fourth slide text';
+} */
 
 #slides .image { 
 	transition: all 1s cubic-bezier(0.770, 0.000, 0.175, 1.000);
@@ -107,5 +127,40 @@ input {
 }
 
 .text {
+    width: 100%;
     font-size: 32px;  
+}
+
+.mem-info {
+    width: 100%;
+    overflow: hidden;
+}
+
+.inner-mem-info {
+    display: flex;
+    width: 400%;
+}
+
+.inner-mem-info span {
+    display: block;
+}
+
+#switch1:checked ~ .control-block .mem-info .inner-mem-info {
+	margin-left: 0;
+    transition: 1s;
+}
+
+#switch2:checked ~ .control-block .mem-info .inner-mem-info {
+	margin-left: -100%;
+    transition: 1s;
+}
+
+#switch3:checked ~ .control-block .mem-info .inner-mem-info {
+	margin-left: -200%;
+    transition: 1s;
+}
+
+#switch4:checked ~ .control-block .mem-info .inner-mem-info {
+	margin-left: -300%;
+    transition: 1s;
 }
