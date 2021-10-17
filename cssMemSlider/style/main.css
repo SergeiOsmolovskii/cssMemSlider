@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: skyblue;
+    background: url(../../cssMemSlider/assets/img/background.jpg)
 }
 
 label { 
@@ -17,8 +17,8 @@ input {
 }
 
 .wrapper {
-    margin: 0 auto;
 	max-width: 1440px;
+    margin: 0 auto;
     padding: 0px 20px;
 }
 
@@ -28,8 +28,10 @@ input {
 }
 
 .main-slider {
-    margin: 50px auto;
+    margin: 50px auto 0px auto;
     overflow: hidden;
+    border: 5px solid #070707;
+    border-radius: 35px 35px 0% 0%;
 }
 
 .slides-inner {
@@ -44,6 +46,7 @@ input {
 
 .slide img {
     width: 100%;
+    height: 100%;
 }
 
 #controls { 
@@ -58,6 +61,7 @@ input {
 }
 
 #controls {
+    margin: auto;
 	text-align: end;
 }
 
@@ -85,30 +89,10 @@ input {
 #switch2:checked ~ .control-block #controls label:nth-child(2),
 #switch3:checked ~ .control-block #controls label:nth-child(3),
 #switch4:checked ~ .control-block #controls label:nth-child(4) {
-	background: red;
+	background: #070707;
     border: 1px solid #000000;
     transition: 0.5s;
 }
-/* 
-.text::after {
-    transition: 0.5s;
-}
-
-#switch1:checked ~ .control-block .text::after {
-    content: 'First slide text';
-}
-
-#switch2:checked ~ .control-block .text::after {
-    content: 'Second slide text';
-}
-
-#switch3:checked ~ .control-block .text::after {
-    content: 'Third slide text';
-}
-
-#switch4:checked ~ .control-block .text::after {
-    content: 'Fourth slide text';
-} */
 
 #slides .image { 
 	transition: all 1s cubic-bezier(0.770, 0.000, 0.175, 1.000);
@@ -124,11 +108,15 @@ input {
 
 .control-block {
     display: flex;
+    padding: 20px;
+    background-color: #fff;
+    border: 5px solid #070707;
 }
 
 .text {
     width: 100%;
-    font-size: 32px;  
+    font-size: 32px;
+    font-family: monospace;  
 }
 
 .mem-info {
